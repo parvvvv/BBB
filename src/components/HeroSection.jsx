@@ -7,42 +7,40 @@ const HeroSection = () => {
   const [phone, setPhone] = useState('');
   const [countryCode, setCountryCode] = useState('');
   const [message, setMessage] = useState('');
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const formData = {
-      name,
-      email,
-      phone: `${phone}`,
-      message
-    };
-
-    try {
-      const response = await fetch(
-        'https://script.google.com/macros/s/AKfycbzpztrVE1ge3CKpr2UZFlwm8GUgehzpDart0HA5JacVq4YXMaIgZefnbGmlSICmcNEDDQ/exec',
-        {
+}
+  const ContactSection = () => {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [countryCode, setCountryCode] = useState('');
+    const [message, setMessage] = useState('');
+  
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+  
+      const form = new FormData();
+      form.append('name', name);
+      form.append('email', email);
+      form.append('phone', `${countryCode}${phone}`);
+      form.append('message', message);
+  
+      try {
+        const response = await fetch('https://script.google.com/macros/s/AKfycbzpztrVE1ge3CKpr2UZFlwm8GUgehzpDart0HA5JacVq4YXMaIgZefnbGmlSICmcNEDDQ/exec', {
           method: 'POST',
-          body: JSON.stringify(formData),
-          headers: { 'Content-Type': 'application/json' }
-        }
-      );
-
-      const result = await response.json();
-      if (result.result === 'success') {
+          body: form,
+        });
+  
         alert('Form submitted successfully!');
         setName('');
         setEmail('');
         setPhone('');
         setCountryCode('');
         setMessage('');
-      } else {
-        alert('Something went wrong.');
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        alert('Error submitting form.');
       }
-    } catch (error) {
-      alert('Error submitting form.');
-      console.error(error);
-    }
-  };
+    };
 
   return (
     <>
