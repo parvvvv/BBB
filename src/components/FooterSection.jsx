@@ -41,7 +41,7 @@ const TechnoscoreContact = () => {
       </footer>
       <div className="sticky-buttons">
   <a href="tel:+919149039480" className="sticky-btn call-btn">📞 Call</a>
-  <a href="https://wa.me/918882696096" className="sticky-btn whatsapp-btn">
+  <a href="https://wa.me/9149039480" className="sticky-btn whatsapp-btn">
   <img src="/wp.jpeg" alt="WhatsApp" className="whatsapp-icon" />
   WhatsApp
 </a>
