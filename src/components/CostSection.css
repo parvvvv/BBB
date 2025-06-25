@@ -5,7 +5,6 @@
   color: white;
 }
 
-
 .cost-section h2 {
   font-size: 26px;
   font-weight: 700;
@@ -27,9 +26,8 @@
   justify-content: center;
   gap: 25px;
   margin-bottom: 40px;
-  flex-wrap: nowrap;
+  flex-wrap: wrap; /* changed from nowrap for responsiveness */
 }
-
 
 .feature-box {
   display: flex;
@@ -39,6 +37,9 @@
   border-radius: 8px;
   padding: 12px 20px;
   color: white;
+  flex: 1 1 250px; /* allows wrapping */
+  max-width: 300px;
+  justify-content: center;
 }
 
 .feature-box img {
@@ -60,4 +61,72 @@
 
 .cta-btn:hover {
   background: #b54300;
+}
+
+/* Medium screens (tablet) */
+@media (max-width: 768px) {
+  .cost-section {
+    padding: 30px 6%;
+  }
+
+  .cost-section h2 {
+    font-size: 22px;
+  }
+
+  .cost-section p {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  .feature-box {
+    padding: 10px 16px;
+    font-size: 14px;
+    gap: 8px;
+  }
+
+  .cta-btn {
+    padding: 12px 26px;
+    font-size: 14px;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 480px) {
+  .cost-section {
+    padding: 25px 4%;
+  }
+
+  .cost-section h2 {
+    font-size: 20px;
+  }
+
+  .cost-section p {
+    font-size: 13px;
+    margin-bottom: 30px;
+  }
+
+  .cost-features {
+    gap: 16px;
+  }
+
+  .feature-box {
+    flex-direction: row;
+    flex: 1 1 100%;
+    justify-content: flex-start;
+    padding: 10px 14px;
+    max-width: 100%;
+    font-size: 13.5px;
+  }
+
+  .feature-box img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .cta-btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 12px;
+    border-radius: 20px;
+  }
 }

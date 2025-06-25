@@ -30,6 +30,7 @@
   justify-content: center;
   gap: 20px;
   flex-wrap: nowrap;
+  overflow: hidden;
 }
 
 .arrowLeft,
@@ -51,6 +52,7 @@
   background-color: #f2f2f2;
 }
 
+/* Card */
 .card {
   display: flex;
   background: linear-gradient(135deg, #065a7d, #0186a5);
@@ -62,11 +64,12 @@
   justify-content: space-between;
   gap: 30px;
   text-align: left;
+  box-sizing: border-box;
 }
 
 .cardLeft {
   flex: 1;
-  min-width: 300px;
+  min-width: 280px;
 }
 
 .logoBox img {
@@ -77,14 +80,14 @@
 }
 
 .cardLeft h3 {
-  font-size: 28px;       /* Main heading like "Jaquar", "FSM App" */
+  font-size: 28px;
   font-weight: 700;
   margin-bottom: 16px;
   color: #fff;
 }
 
 .cardLeft h4 {
-  font-size: 18px;        /* Subheadings: Problem, Solution Delivered */
+  font-size: 18px;
   font-weight: 600;
   margin-top: 20px;
   margin-bottom: 8px;
@@ -93,7 +96,7 @@
 
 .problem {
   margin: 10px 0;
-  font-size: 16px;       /* Body text — readable */
+  font-size: 16px;
   line-height: 1.6;
   color: #d4ecf6;
 }
@@ -102,11 +105,10 @@
   list-style: disc;
   padding-left: 20px;
   margin-top: 10px;
-  font-size: 16px;       /* Solution points */
+  font-size: 16px;
   color: #fff;
   line-height: 1.6;
 }
-
 
 .caseButton {
   margin-top: 20px;
@@ -138,6 +140,8 @@
   object-fit: contain;
   border-radius: 10px;
 }
+
+/* Slider Logic */
 .sliderWrapper {
   overflow: hidden;
   width: 100%;
@@ -153,4 +157,94 @@
 .card {
   min-width: 100%;
   box-sizing: border-box;
+}
+
+/* ✅ Responsive Breakpoints */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    gap: 20px;
+  }
+
+  .cardLeft,
+  .cardRight {
+    width: 100%;
+    text-align: center;
+  }
+
+  .cardLeft h3 {
+    font-size: 24px;
+  }
+
+  .cardLeft h4 {
+    font-size: 16px;
+  }
+
+  .cardLeft ul {
+    font-size: 15px;
+    padding-left: 0;
+    list-style-position: inside;
+  }
+
+  .phoneImg {
+    height: 220px;
+  }
+
+  .arrowLeft,
+  .arrowRight {
+    padding: 10px 14px;
+    font-size: 20px;
+  }
+}
+
+/* Phone */
+@media (max-width: 576px) {
+  .successSection {
+    padding: 50px 16px;
+  }
+
+  .successSection h2 {
+    font-size: 22px;
+  }
+
+  .subtext {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  .cardLeft h3 {
+    font-size: 20px;
+  }
+
+  .cardLeft h4 {
+    font-size: 15px;
+  }
+
+  .cardLeft ul {
+    font-size: 14px;
+  }
+
+  .phoneImg {
+    height: 180px;
+  }
+
+  .caseButton {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .arrowLeft,
+  .arrowRight {
+    padding: 8px 12px;
+    font-size: 18px;
+  }
 }

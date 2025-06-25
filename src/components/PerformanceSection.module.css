@@ -7,7 +7,7 @@
 }
 
 .textContainer {
-  margin-left: 80px; /* You can tweak this for your layout */
+  margin-left: 80px;
   max-width: 600px;
 }
 
@@ -43,13 +43,48 @@
 .textContainer button:hover {
   background-color: #a73e00;
 }
+
+/* Tablet */
 @media (max-width: 768px) {
+  .performanceSection {
+    justify-content: center;
+    padding: 30px 0;
+  }
+
   .textContainer {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 0 20px;
+    text-align: center;
   }
 
   .textContainer h2 {
     font-size: 20px;
+  }
+
+  .textContainer button {
+    padding: 10px 22px;
+    font-size: 14px;
+  }
+}
+
+/* Phone */
+@media (max-width: 480px) {
+  .performanceSection {
+    padding: 25px 0;
+  }
+
+  .textContainer h2 {
+    font-size: 18px;
+  }
+
+  .textContainer p {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .textContainer button {
+    padding: 10px 20px;
+    font-size: 13.5px;
+    width: 100%;
+    max-width: 280px;
   }
 }
