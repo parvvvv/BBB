@@ -19,14 +19,14 @@ const TechnoscoreContact = () => {
 
       <div className="locations">
         <div className="location-box">
-          <h4>US</h4>
+          <h4>🇺🇸 US</h4>
           <p>One Boston Place, 201 Washington St 26th Floor, Boston, MA 02108, United States</p>
           
           
         </div>
 
         <div className="location-box">
-          <h4>IN</h4>
+          <h4>🇮🇳 IN</h4>
           <p>Plot No. 76 D, Phase IV, Udyog Vihar, Sector 18, Gurugram, Haryana, India</p>
           <p>📞 +91 9149039480</p>
         </div>
