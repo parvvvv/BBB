@@ -248,3 +248,66 @@
     font-size: 18px;
   }
 }
+/* Ensure slider track wraps correctly */
+.sliderTrack {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+/* Ensure arrow buttons stay visible and aligned */
+.carousel {
+  flex-wrap: nowrap;
+  overflow: hidden;
+  padding: 0 10px;
+}
+
+.arrowLeft,
+.arrowRight {
+  flex-shrink: 0;
+}
+
+/* Limit max width on small screens */
+@media (max-width: 768px) {
+  .card {
+    max-width: 100%;
+  }
+
+  .sliderWrapper {
+    padding: 0;
+  }
+
+  .cardRight {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .phoneImg {
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+/* Prevent overflow on extra small screens */
+@media (max-width: 400px) {
+  .card {
+    padding: 16px;
+  }
+
+  .cardLeft h3 {
+    font-size: 18px;
+  }
+
+  .cardLeft h4 {
+    font-size: 14px;
+  }
+
+  .arrowLeft,
+  .arrowRight {
+    padding: 6px 10px;
+    font-size: 16px;
+  }
+}
+body {
+  overflow-x: hidden;
+}
+
