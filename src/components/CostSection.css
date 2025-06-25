@@ -1,0 +1,63 @@
+.cost-section {
+  background: #0e1a2b;
+  padding: 40px 10%;
+  text-align: center;
+  color: white;
+}
+
+
+.cost-section h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.cost-section h2 span {
+  font-weight: 800;
+}
+
+.cost-section p {
+  font-size: 15px;
+  margin-bottom: 50px;
+  color: #e0e0e0;
+}
+
+.cost-features {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 40px;
+  flex-wrap: nowrap;
+}
+
+
+.feature-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px dashed #ff8000;
+  border-radius: 8px;
+  padding: 12px 20px;
+  color: white;
+}
+
+.feature-box img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.cta-btn {
+  background: #d35400;
+  border: none;
+  color: white;
+  padding: 14px 30px;
+  font-size: 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #b54300;
+}

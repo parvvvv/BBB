@@ -1,0 +1,156 @@
+.successSection {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.successSection h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.successSection h2 span {
+  color: #000;
+  border-bottom: 3px solid #f26522;
+}
+
+.subtext {
+  color: #444;
+  font-size: 16px;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+.arrowLeft,
+.arrowRight {
+  background: #fff;
+  border: 2px solid #000;
+  color: #000;
+  border-radius: 50%;
+  padding: 12px 18px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ccc;
+  transition: all 0.3s ease;
+}
+
+.arrowLeft:hover,
+.arrowRight:hover {
+  background-color: #f2f2f2;
+}
+
+.card {
+  display: flex;
+  background: linear-gradient(135deg, #065a7d, #0186a5);
+  border-radius: 20px;
+  padding: 40px;
+  color: #fff;
+  max-width: 1100px;
+  width: 100%;
+  justify-content: space-between;
+  gap: 30px;
+  text-align: left;
+}
+
+.cardLeft {
+  flex: 1;
+  min-width: 300px;
+}
+
+.logoBox img {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.cardLeft h3 {
+  font-size: 28px;       /* Main heading like "Jaquar", "FSM App" */
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.cardLeft h4 {
+  font-size: 18px;        /* Subheadings: Problem, Solution Delivered */
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  color: #ffffffcc;
+}
+
+.problem {
+  margin: 10px 0;
+  font-size: 16px;       /* Body text — readable */
+  line-height: 1.6;
+  color: #d4ecf6;
+}
+
+.cardLeft ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+  font-size: 16px;       /* Solution points */
+  color: #fff;
+  line-height: 1.6;
+}
+
+
+.caseButton {
+  margin-top: 20px;
+  background-color: #f26522;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.caseButton:hover {
+  background-color: #d95010;
+}
+
+.cardRight {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.phoneImg {
+  height: 300px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.sliderWrapper {
+  overflow: hidden;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.sliderTrack {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  width: 100%;
+}
+
+.card {
+  min-width: 100%;
+  box-sizing: border-box;
+}

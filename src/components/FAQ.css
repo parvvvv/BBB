@@ -1,0 +1,112 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.faq-container {
+  width: 100vw;
+  height: auto; /* or unset */
+  padding: 40px 20px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.faq-container h2 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.faq-container h2 span {
+  color: #e65800;
+  text-decoration: underline;
+}
+
+.faq-card {
+  width: 100%;
+  max-width: 800px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.faq-header {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+}
+
+.faq-question-text {
+  flex: 1;
+  margin-right: 15px;
+}
+
+.faq-toggle-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 28px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #eee;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  font-size: 16px;
+  color: #444;
+}
+
+.faq-toggle-icon:hover {
+  background-color: #e65800;
+  color: white;
+}
+
+.faq-toggle-icon.rotate {
+  transform: rotate(180deg);
+}
+
+/* Slide animation */
+.faq-answer-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+
+
+.faq-answer-wrapper.open {
+  max-height: 300px; /* enough height to accommodate answer */
+}
+
+.faq-answer {
+  padding: 0 20px 20px 20px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.show-toggle {
+  background: none;
+  border: none;
+  color: #e65800;
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 10px;
+  cursor: pointer;
+}

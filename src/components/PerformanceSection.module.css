@@ -1,0 +1,55 @@
+.performanceSection {
+  background-color: #031328;
+  padding: 40px 0;
+  color: #ffffff;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.textContainer {
+  margin-left: 80px; /* You can tweak this for your layout */
+  max-width: 600px;
+}
+
+.textContainer h2 {
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.textContainer h2 span {
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.textContainer p {
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #d9d9d9;
+}
+
+.textContainer button {
+  background-color: #c24d00;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.textContainer button:hover {
+  background-color: #a73e00;
+}
+@media (max-width: 768px) {
+  .textContainer {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .textContainer h2 {
+    font-size: 20px;
+  }
+}
