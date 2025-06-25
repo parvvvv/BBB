@@ -7,6 +7,9 @@ const countryCodes = [
   { code: '+44', country: 'UK' },
   { code: '+61', country: 'Australia' },
   { code: '+81', country: 'Japan' },
+  { code: '+31', country: 'Netherlands' },
+  { code: '+971', country: 'Dubai (UAE)' },
+  { code: '+1', country: 'Canada' },
 ];
 
 const ContactSection = () => {
@@ -70,8 +73,8 @@ const ContactSection = () => {
               <select value={countryCode} onChange={(e) => setCountryCode(e.target.value)} required>
                 <option value="" disabled hidden>Select</option>
                 {countryCodes.map(({ code, country }) => (
-                  <option key={code} value={code}>
-                    {country} ({code})
+                  <option key={`${country}-${code}`} value={code}>
+                    ({code})
                   </option>
                 ))}
               </select>
