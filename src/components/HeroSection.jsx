@@ -5,18 +5,27 @@ const HeroSection = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
+  const [countryCode, setCountryCode] = useState('');
   const [message, setMessage] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const formData = { name, email, phone, message };
+    const formData = {
+      name,
+      email,
+      phone: `${phone}`,
+      message
+    };
 
     try {
-      const response = await fetch('https://script.google.com/macros/s/AKfycbyu0oxS3kyyW6qZLNywAsKXCuEnTmdT_5Cc1P1z0FCnwSYd_bv04vx0NM2kH4ecEmryBA/exec', {
-        method: 'POST',
-        body: JSON.stringify(formData),
-        headers: { 'Content-Type': 'application/json' }
-      });
+      const response = await fetch(
+        'https://script.google.com/macros/s/AKfycbzpztrVE1ge3CKpr2UZFlwm8GUgehzpDart0HA5JacVq4YXMaIgZefnbGmlSICmcNEDDQ/exec',
+        {
+          method: 'POST',
+          body: JSON.stringify(formData),
+          headers: { 'Content-Type': 'application/json' }
+        }
+      );
 
       const result = await response.json();
       if (result.result === 'success') {
@@ -24,6 +33,7 @@ const HeroSection = () => {
         setName('');
         setEmail('');
         setPhone('');
+        setCountryCode('');
         setMessage('');
       } else {
         alert('Something went wrong.');
@@ -73,7 +83,16 @@ const HeroSection = () => {
               <input type="text" placeholder="Name*" value={name} onChange={(e) => setName(e.target.value)} required />
               <input type="email" placeholder="Email*" value={email} onChange={(e) => setEmail(e.target.value)} required />
               <div className="phone-field">
-                <span>+91</span>
+                <select value={countryCode} onChange={(e) => setCountryCode(e.target.value)}>
+                   <option value="" disabled hidden>Select</option>  
+                  <option value="+91">🇮🇳 +91</option>
+                  <option value="+1">🇺🇸 +1</option>
+                  <option value="+44">🇬🇧 +44</option>
+                  <option value="+61">🇦🇺 +61</option>
+                  <option value="+81">🇯🇵 +81</option>
+                  <option value="+971">🇦🇪 +971</option>
+                  <option value="+49">🇩🇪 +49</option>
+                </select>
                 <input type="tel" placeholder="Phone*" value={phone} onChange={(e) => setPhone(e.target.value)} required />
               </div>
               <textarea placeholder="Describe your requirement *" value={message} onChange={(e) => setMessage(e.target.value)} required />

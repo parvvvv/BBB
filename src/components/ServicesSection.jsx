@@ -29,18 +29,18 @@ const services = [
     icon: 'icon-uiux.svg'
   },
   {
-    title: 'App Store Optimization',
-    desc: 'Through our Play Store and App Store Optimization services, we boost traffic to your app’s page, providing sustained growth in downloads.',
+    title: 'Software Development',
+    desc: 'We deliver scalable and high-performance software solutions tailored to your business goals, using the latest technologies and agile methodologies.',
     icon: 'icon-appStore.svg'
   },
   {
-    title: 'Testing and QA',
-    desc: 'Our mobile app testing and QA services ensure consistent functionality, performance, and security with thorough testing across all platforms.',
+    title: 'Customised ERP',
+    desc: 'Our ERP solutions are designed to streamline your business operations with fully customized modules that suit your unique workflow and processes.',
     icon: 'icon_tester.svg'
   },
   {
-    title: 'Maintenance and Support',
-    desc: 'Get regular updates, bug fixes, security patches, and performance optimization assistance with our mobile app maintenance and support services.',
+    title: 'Web Development',
+    desc: 'We build responsive, secure, and SEO-optimized websites that offer exceptional user experience and drive your digital presence forward.',
     icon: 'icon_support.svg'
   }
 ];

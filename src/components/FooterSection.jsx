@@ -21,14 +21,14 @@ const TechnoscoreContact = () => {
         <div className="location-box">
           <h4>US</h4>
           <p>One Boston Place, 201 Washington St 26th Floor, Boston, MA 02108, United States</p>
-          <p>📞 +1 646 613 0076</p>
-          <p>📞 +1-201-6033633</p>
+          
+          
         </div>
 
         <div className="location-box">
           <h4>IN</h4>
           <p>Plot No. 76 D, Phase IV, Udyog Vihar, Sector 18, Gurugram, Haryana, India</p>
-          <p>📞 +91 8882696096</p>
+          <p>📞 +91 9149039480</p>
         </div>
       </div>
 
@@ -39,6 +39,15 @@ const TechnoscoreContact = () => {
       <footer className="footer">
         <p>© Copyright 2025, All Rights Reserved with <a href="mailto:raghav@bigbrandbucket.com">Big Brand Bucket</a> – Web & Mobile App Development Company.</p>
       </footer>
+      <div className="sticky-buttons">
+  <a href="tel:+919149039480" className="sticky-btn call-btn">📞 Call</a>
+  <a href="https://wa.me/918882696096" className="sticky-btn whatsapp-btn">
+  <img src="/wp.jpeg" alt="WhatsApp" className="whatsapp-icon" />
+  WhatsApp
+</a>
+
+</div>
+
     </div>
   );
 };

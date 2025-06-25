@@ -243,3 +243,14 @@
     right: -12px;
   }
 }
+/* Add slide animation */
+.testimonial-content {
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  opacity: 0;
+  transform: translateX(50%);
+}
+
+.testimonial-content.slide {
+  opacity: 1;
+  transform: translateX(0);
+}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './TestimonialSection.css';
 
 const testimonials = [
@@ -17,8 +17,13 @@ const testimonials = [
 const TestimonialSection = () => {
   const [index, setIndex] = useState(0);
 
-  const prev = () => setIndex((index - 1 + testimonials.length) % testimonials.length);
-  const next = () => setIndex((index + 1) % testimonials.length);
+  const next = () => setIndex((prev) => (prev + 1) % testimonials.length);
+  const prev = () => setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+
+  useEffect(() => {
+    const interval = setInterval(next, 5000); // Auto-scroll every 5 seconds
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, []);
 
   return (
     <section className="testimonial-section">
@@ -38,7 +43,8 @@ const TestimonialSection = () => {
 
       <div className="testimonial-slider">
         <button onClick={prev} className="nav-btn">←</button>
-        <div className="testimonial-content slide">
+        <div className={`testimonial-content slide`}>
+
           <p className="quote">{testimonials[index].text}</p>
           <h4>{testimonials[index].name}</h4>
           <p className="title">{testimonials[index].position}</p>
