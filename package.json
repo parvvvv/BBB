@@ -3,7 +3,7 @@
 
   "name": "technoscore-clone",
   "private": true,
-  "homepage": "/adslandingpage",
+  
   "version": "0.0.0",
   "type": "module",
   "scripts": {
