@@ -5,7 +5,7 @@ const SuccessStories = () => {
   const stories = [
     {
       company: "Jaquar",
-      logo: "/portfolio-logo-jaquar.png",
+      logo: new URL('../assets/portfolio-logo-jaquar.png', import.meta.url).href,
       problem:
         "Retailers lose $2T annually due to poor online search. Our client had a similar issue, with only 10–15% of searchers purchasing.",
       solutions: [
@@ -14,8 +14,8 @@ const SuccessStories = () => {
         "72% higher conversions",
         "57% higher click-throughs",
       ],
-      imageLeft: "/port1.png",
-      imageRight: "/port1slider.jpg",
+      imageLeft: new URL('../assets/port1.png', import.meta.url).href,
+      imageRight: new URL('../assets/port1slider.jpg', import.meta.url).href,
     },
     {
       company: "Field Service Management (FSM) App Development",
@@ -28,8 +28,8 @@ const SuccessStories = () => {
         "46% reduction in avg. time spent on each job site.",
         "20% reduction in fuel costs.",
       ],
-      imageLeft: "/port3.png",
-      imageRight: "/port3slider.jpg",
+      imageLeft: new URL('../assets/port3.png', import.meta.url).href,
+      imageRight: new URL('../assets/port3slider.jpg', import.meta.url).href,
     }
   ];
 

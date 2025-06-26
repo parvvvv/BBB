@@ -55,15 +55,18 @@ const ServicesSection = () => {
         Unlock mobile app design and development services that lead to apps with robust core platform functionality and limitless scope for feature integration.
       </p>
       <div className="services-grid">
-        {services.map((service, idx) => (
-          <div className={`service-card ${service.highlight ? 'highlight' : ''}`} key={idx}>
-            <div className="icon">
-              <img src={`/${service.icon}`} alt={service.title} />
+        {services.map((service, idx) => {
+          const iconUrl = new URL(`../assets/${service.icon}`, import.meta.url).href;
+          return (
+            <div className={`service-card ${service.highlight ? 'highlight' : ''}`} key={idx}>
+              <div className="icon">
+                <img src={iconUrl} alt={service.title} />
+              </div>
+              <h3>{service.title}</h3>
+              <p>{service.desc}</p>
             </div>
-            <h3>{service.title}</h3>
-            <p>{service.desc}</p>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

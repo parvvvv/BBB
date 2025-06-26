@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './TestimonialSection.css';
 
+const logoClutch = new URL('../assets/logo-clutch.svg', import.meta.url).href;
+const logoTrustpilot = new URL('../assets/logo-trustpilot.svg', import.meta.url).href;
+
 const testimonials = [
   {
     text: "On the lookout for an eLearning solution for primary and secondary schools in Nigeria, we came upon Big Brand Bucket because of a recommendation from a trusted peer...",
@@ -21,8 +24,8 @@ const TestimonialSection = () => {
   const prev = () => setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
   useEffect(() => {
-    const interval = setInterval(next, 5000); // Auto-scroll every 5 seconds
-    return () => clearInterval(interval); // Cleanup on unmount
+    const interval = setInterval(next, 5000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -34,9 +37,9 @@ const TestimonialSection = () => {
             <p>Our commitment to client satisfaction has resulted in a 98% retention rate. Here's feedback from our clients:</p>
           </div>
           <div className="review-logos-box">
-            <img src="logo-clutch.svg" alt="Clutch" />
+            <img src={logoClutch} alt="Clutch" />
             <div className="divider"></div>
-            <img src="logo-trustpilot.svg" alt="Trustpilot" />
+            <img src={logoTrustpilot} alt="Trustpilot" />
           </div>
         </div>
       </div>
@@ -44,7 +47,6 @@ const TestimonialSection = () => {
       <div className="testimonial-slider">
         <button onClick={prev} className="nav-btn">←</button>
         <div className={`testimonial-content slide`}>
-
           <p className="quote">{testimonials[index].text}</p>
           <h4>{testimonials[index].name}</h4>
           <p className="title">{testimonials[index].position}</p>

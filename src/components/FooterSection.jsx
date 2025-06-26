@@ -1,12 +1,14 @@
 import React from 'react';
 import './TechnoscoreContact.css';
 
+const wpIcon = new URL('../assets/wp.jpeg', import.meta.url).href;
+
 const TechnoscoreContact = () => {
   return (
     <div className="contact-container">
       <header className="header">
         <div className="logo-image">
-          <img src="/BigBrandBucketLogo.webp" alt="Big Brand Bucket Logo" className="logo-img" />
+          <img src={new URL('../assets/BigBrandBucketLogo.webp', import.meta.url).href} alt="Big Brand Bucket Logo" className="logo-img" />
           <p className="tagline">BUILT FOR BIGGER IMPACT</p>
         </div>
       </header>
@@ -21,8 +23,6 @@ const TechnoscoreContact = () => {
         <div className="location-box">
           <h4>🇺🇸 US</h4>
           <p>One Boston Place, 201 Washington St 26th Floor, Boston, MA 02108, United States</p>
-          
-          
         </div>
 
         <div className="location-box">
@@ -39,15 +39,14 @@ const TechnoscoreContact = () => {
       <footer className="footer">
         <p>© Copyright 2025, All Rights Reserved with <a href="mailto:raghav@bigbrandbucket.com">Big Brand Bucket</a> – Web & Mobile App Development Company.</p>
       </footer>
+
       <div className="sticky-buttons">
-  <a href="tel:+919149039480" className="sticky-btn call-btn">📞 Call</a>
-  <a href="https://wa.me/9149039480" className="sticky-btn whatsapp-btn">
-  <img src="/wp.jpeg" alt="WhatsApp" className="whatsapp-icon" />
-  WhatsApp
-</a>
-
-</div>
-
+        <a href="tel:+919149039480" className="sticky-btn call-btn">📞 Call</a>
+        <a href="https://wa.me/9149039480" className="sticky-btn whatsapp-btn">
+          <img src={wpIcon} alt="WhatsApp" className="whatsapp-icon" />
+          WhatsApp
+        </a>
+      </div>
     </div>
   );
 };

@@ -30,7 +30,10 @@ const CostSection = () => {
       <div className="cost-features">
         {features.map((feature, idx) => (
           <div className="feature-box" key={idx}>
-            <img src={`/${feature.icon}`} alt={feature.text} />
+            <img
+              src={new URL(`../assets/${feature.icon}`, import.meta.url).href}
+              alt={feature.text}
+            />
             <span>{feature.text}</span>
           </div>
         ))}

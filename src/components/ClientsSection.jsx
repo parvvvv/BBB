@@ -9,8 +9,6 @@ const clientLogos = [
   'yanmar.png',
   'mcdonalds.png',
   'ng.png',
-  
-  
 ];
 
 const ClientsSection = () => {
@@ -19,7 +17,11 @@ const ClientsSection = () => {
       <h2>OUR <span>CLIENTS</span></h2>
       <div className="clients-logos">
         {clientLogos.map((logo, idx) => (
-          <img src={`/${logo}`} alt={`Client ${idx + 1}`} key={idx} />
+          <img
+            src={new URL(`../assets/${logo}`, import.meta.url).href}
+            alt={`Client ${idx + 1}`}
+            key={idx}
+          />
         ))}
       </div>
     </section>
