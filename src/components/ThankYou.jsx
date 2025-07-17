@@ -12,7 +12,7 @@ const ThankYou = () => {
         </p>
         <div className="links-box">
           <Link to="/" className="back-home">← Back to Home</Link>
-          <a href="/#contact-form" className="back-home">📞 Contact Again</a>
+          <Link to="/contact-form" className="back-home">📞 Contact Again</Link>
         </div>
       </div>
     </div>

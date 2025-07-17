@@ -74,7 +74,7 @@ const ContactSection = () => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
-              autoFocus
+              
             />
             <input
               type="email"
