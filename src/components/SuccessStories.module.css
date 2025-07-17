@@ -24,13 +24,14 @@
   margin-inline: auto;
 }
 
+/* Carousel */
 .carousel {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
-  flex-wrap: nowrap;
   overflow: hidden;
+  padding: 0 10px;
 }
 
 .arrowLeft,
@@ -45,6 +46,7 @@
   cursor: pointer;
   box-shadow: 0 0 10px #ccc;
   transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
 .arrowLeft:hover,
@@ -55,6 +57,7 @@
 /* Card */
 .card {
   display: flex;
+  flex-direction: row;
   background: linear-gradient(135deg, #065a7d, #0186a5);
   border-radius: 20px;
   padding: 40px;
@@ -65,6 +68,7 @@
   gap: 30px;
   text-align: left;
   box-sizing: border-box;
+  flex-shrink: 0;
 }
 
 .cardLeft {
@@ -83,7 +87,6 @@
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 16px;
-  color: #fff;
 }
 
 .cardLeft h4 {
@@ -139,6 +142,7 @@
   width: auto;
   object-fit: contain;
   border-radius: 10px;
+  max-width: 100%;
 }
 
 /* Slider Logic */
@@ -154,14 +158,9 @@
   width: 100%;
 }
 
-.card {
-  min-width: 100%;
-  box-sizing: border-box;
-}
+/* Responsive Breakpoints */
 
-/* ✅ Responsive Breakpoints */
-
-/* Tablet */
+/* Tablets */
 @media (max-width: 992px) {
   .card {
     flex-direction: column;
@@ -174,7 +173,6 @@
   .cardLeft,
   .cardRight {
     width: 100%;
-    text-align: center;
   }
 
   .cardLeft h3 {
@@ -202,7 +200,7 @@
   }
 }
 
-/* Phone */
+/* Phones */
 @media (max-width: 576px) {
   .successSection {
     padding: 50px 16px;
@@ -235,6 +233,7 @@
 
   .phoneImg {
     height: 180px;
+    max-width: 100%;
   }
 
   .caseButton {
@@ -247,47 +246,14 @@
     padding: 8px 12px;
     font-size: 18px;
   }
-}
-/* Ensure slider track wraps correctly */
-.sliderTrack {
-  width: 100%;
-  flex-shrink: 0;
-}
-
-/* Ensure arrow buttons stay visible and aligned */
-.carousel {
-  flex-wrap: nowrap;
-  overflow: hidden;
-  padding: 0 10px;
-}
-
-.arrowLeft,
-.arrowRight {
-  flex-shrink: 0;
-}
-
-/* Limit max width on small screens */
-@media (max-width: 768px) {
-  .card {
-    max-width: 100%;
-  }
-
-  .sliderWrapper {
-    padding: 0;
-  }
 
   .cardRight {
     flex-direction: column;
     gap: 12px;
   }
-
-  .phoneImg {
-    height: auto;
-    max-width: 100%;
-  }
 }
 
-/* Prevent overflow on extra small screens */
+/* Very small phones */
 @media (max-width: 400px) {
   .card {
     padding: 16px;
@@ -307,7 +273,8 @@
     font-size: 16px;
   }
 }
+
+/* Fix horizontal overflow on iPhones */
 body {
   overflow-x: hidden;
 }
-
