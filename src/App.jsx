@@ -1,5 +1,5 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import HeroSection from './components/HeroSection';
 import ClientsSection from './components/ClientsSection';
 import ServicesSection from './components/ServicesSection';
@@ -30,6 +30,12 @@ const MainPage = () => (
 );
 
 const App = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <Routes>
       <Route path="/" element={<MainPage />} />
