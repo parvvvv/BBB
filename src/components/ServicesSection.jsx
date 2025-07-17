@@ -3,44 +3,44 @@ import './ServicesSection.css';
 
 const services = [
   {
-    title: 'Android App Development',
-    desc: 'Rise above the competition with our Android app development company that builds device-agnostic apps that work smoothly irrespective of the version of Android.',
+    title: 'Android App Development Company',
+    desc: 'Our Android app development company delivers device-agnostic apps that perform seamlessly across all Android versions and devices.',
     icon: 'icon-android.svg'
   },
   {
-    title: 'iOS App Development',
-    desc: 'With strong foundational know-how of Objective-C, UIKit, and relevant IDEs, our iOS app development company builds market-leading apps.',
+    title: 'iOS App Development Company in India',
+    desc: 'Our expert iOS developers use Objective-C, UIKit, and Swift to build premium iPhone and iPad apps tailored to business goals.',
     icon: 'icon-ios.svg',
     highlight: true
   },
   {
     title: 'React Native App Development',
-    desc: 'We create enterprise-grade iOS and Android apps by combining JavaScript/TypeScript flexibility with native performance.',
+    desc: 'We deliver high-performance cross-platform apps using React Native, combining JavaScript/TypeScript with native experience.',
     icon: 'icon-appDev2.svg'
   },
   {
-    title: 'Flutter App Development',
-    desc: 'Get natively compiled applications for mobile, web, and desktop with the help of experienced Flutter app developers.',
+    title: 'Flutter App Development Company',
+    desc: 'Leverage Flutter to build fast, beautiful, and natively compiled apps for mobile, desktop, and web from a single codebase.',
     icon: 'icon-flutter.svg'
   },
   {
-    title: 'Mobile UI/UX Design',
-    desc: 'Our mobile app design and development services make sure the app we deliver keeps your customers engaged with smooth navigation and an intuitive in-app experience.',
+    title: 'Mobile App UI/UX Design Services',
+    desc: 'We offer intuitive mobile UI/UX designs that ensure user engagement with smooth, consistent, and visually stunning interfaces.',
     icon: 'icon-uiux.svg'
   },
   {
-    title: 'Software Development',
-    desc: 'We deliver scalable and high-performance software solutions tailored to your business goals, using the latest technologies and agile methodologies.',
+    title: 'Custom Software Development Company',
+    desc: 'Build scalable, secure, and custom software solutions aligned with your vision using modern tools and agile development.',
     icon: 'icon-appStore.svg'
   },
   {
-    title: 'Customised ERP',
-    desc: 'Our ERP solutions are designed to streamline your business operations with fully customized modules that suit your unique workflow and processes.',
+    title: 'Customised ERP Development',
+    desc: 'Our ERP development company in India provides fully customized modules that automate and optimize your business workflow.',
     icon: 'icon_tester.svg'
   },
   {
-    title: 'Web Development',
-    desc: 'We build responsive, secure, and SEO-optimized websites that offer exceptional user experience and drive your digital presence forward.',
+    title: 'Web Development Services',
+    desc: 'Get SEO-optimized, mobile-first web development services that boost user experience, speed, and performance.',
     icon: 'icon_support.svg'
   }
 ];
@@ -49,11 +49,12 @@ const ServicesSection = () => {
   return (
     <section className="services-section">
       <h2>
-        GET FULL-STACK <span>MOBILE APPLICATION DEVELOPMENT SERVICES</span>
+        Full-Stack <span>Mobile App Development Services in India</span>
       </h2>
       <p>
-        Unlock mobile app design and development services that lead to apps with robust core platform functionality and limitless scope for feature integration.
+        As a leading custom mobile app development company in India, we build high-performance, feature-rich Android, iOS, and cross-platform apps for startups and enterprises.
       </p>
+
       <div className="services-grid">
         {services.map((service, idx) => {
           const iconUrl = new URL(`../assets/${service.icon}`, import.meta.url).href;

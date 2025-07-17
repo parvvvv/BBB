@@ -19,12 +19,12 @@ const CostSection = () => {
   return (
     <section className="cost-section">
       <h2>
-        LOCAL DEVELOPMENT TEAMS ARE TOO <span>COSTLY</span>,<br />
-        <span>IMPACTING YOUR BUDGET?</span>
+        Worried About <span>App Development Cost</span>?<br />
+        Local Teams Too <span>Expensive</span>?
       </h2>
       <p>
-        Big Brand Bucket offers competitive pricing with uncompromising quality, providing <br />
-        the best value for your investment.
+        Big Brand Bucket offers affordable mobile app development services in India with zero compromise on quality.
+        Hire expert developers at a fraction of the local cost, backed by 24/7 support and NDAs.
       </p>
 
       <div className="cost-features">
@@ -32,14 +32,14 @@ const CostSection = () => {
           <div className="feature-box" key={idx}>
             <img
               src={new URL(`../assets/${feature.icon}`, import.meta.url).href}
-              alt={feature.text}
+              alt={`${feature.text} icon`}
             />
             <span>{feature.text}</span>
           </div>
         ))}
       </div>
 
-      <button className="cta-btn" onClick={scrollToForm}>Talk to our Experts</button>
+      <button className="cta-btn" onClick={scrollToForm}>Get Cost Estimate</button>
     </section>
   );
 };
