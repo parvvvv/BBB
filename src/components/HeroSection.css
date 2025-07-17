@@ -156,18 +156,18 @@ body, html, #root {
   font-size: 17px;
   font-weight: 500;
   color: #000;
-  border: 1px solid #ccc;              /* ✅ Full box border */
-  border-radius: 6px;                  /* ✅ Match input border */
-  background-color: #fff;              /* ✅ Match input bg */
-  padding: 12px;                       /* ✅ Match input padding */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  padding: 12px;
   appearance: none;
   outline: none;
   background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0l5 6 5-6H0z' fill='%23000'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 10px center;
   background-size: 10px;
-  height: 47px; 
-  margin-bottom: 0.8rem;                       /* ✅ Match input height */
+  height: 47px;
+  margin-bottom: 0.8rem;
 }
 
 .phone-field input {
@@ -180,9 +180,6 @@ body, html, #root {
   color: #000;
   height: 47px;
 }
-
-
-
 
 /* Submit Button */
 .right-form button {
@@ -296,7 +293,7 @@ body, html, #root {
   }
 
   .phone-field select {
-    width:23%;
+    width: 23%;
     font-size: 16px;
     padding: 10px;
     margin-bottom: 1rem;
@@ -305,5 +302,95 @@ body, html, #root {
   .right-form button {
     font-size: 18px;
     padding: 12px;
+  }
+}
+
+/* ✅ iPhone 12 & small screen fix: 390px wide or smaller */
+@media (max-width: 420px) {
+  .hero-section {
+    padding: 24px 0;
+  }
+
+  .hero-inner {
+    padding: 0 5%;
+  }
+
+  .left-content h1 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .left-content p {
+    font-size: 17px;
+    text-align: center;
+  }
+
+  .left-content ul {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .right-form {
+    padding: 14px;
+    border-radius: 16px;
+  }
+
+  .right-form h3 {
+    font-size: 18px;
+  }
+
+  .right-form input,
+  .right-form textarea {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .phone-field {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.phone-field select {
+  width: 25%;
+  font-size: 16px;
+  height: 44px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  appearance: none;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0l5 6 5-6H0z' fill='%23000'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px;
+}
+
+.phone-field input {
+  width: 75%;
+  font-size: 12px;
+  height: 44px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  background-color: #fff;
+  color: #000;
+}
+
+
+  .right-form button {
+    font-size: 17px;
+    padding: 10px;
+    border-radius: 6px;
+  }
+
+  .logos {
+    gap: 12px;
+  }
+
+  .logos img {
+    width: 64px;
+    height: 28px;
   }
 }
