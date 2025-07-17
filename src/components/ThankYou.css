@@ -40,3 +40,10 @@
 .back-home:hover {
   background-color: #d36111;
 }
+.links-box {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
