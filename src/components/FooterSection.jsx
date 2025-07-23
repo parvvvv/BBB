@@ -6,7 +6,6 @@ const TechnoscoreContact = () => {
   return (
     <div className="contact-container">
       <footer className="main-footer">
-        {/* Top Section */}
         <div className="footer-top">
           {/* Quick Links */}
           <div className="footer-column">
@@ -34,7 +33,7 @@ const TechnoscoreContact = () => {
             </ul>
           </div>
 
-          {/* Subscribe & Contact */}
+          {/* Subscribe and Contact */}
           <div className="footer-column subscribe-section">
             <div className="subscribe">
               <input type="email" placeholder="Email" />
@@ -44,11 +43,7 @@ const TechnoscoreContact = () => {
               <p>+91 - 9149039480 &nbsp; | &nbsp; +91 - 9818202357</p>
               <p><a href="mailto:raghav@bigbrandbucket.com">raghav@bigbrandbucket.com</a></p>
               <div className="contact-icons">
-                <a
-                  href="https://wa.me/919149039480"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="https://wa.me/919149039480" target="_blank" rel="noopener noreferrer">
                   <FaWhatsapp className="icon whatsapp" />
                 </a>
                 <a href="mailto:raghav@bigbrandbucket.com">
@@ -59,33 +54,24 @@ const TechnoscoreContact = () => {
           </div>
         </div>
 
-        {/* Divider */}
         <hr className="footer-divider" />
 
-        {/* Branches Section */}
+        {/* Branches */}
         <div className="branches">
           <h4 className="branches-heading">Our Branches</h4>
           <div className="branches-wrapper">
             <div className="branch">
               <h5>Gurugram</h5>
-              <p>
-                Plot No. 76 D, Udyog Vihar Phase 4,
-                <br />
-                Gurugram, Haryana 122001
-              </p>
+              <p>Plot No. 76 D, Udyog Vihar Phase 4,<br />Gurugram, Haryana 122001</p>
             </div>
             <div className="branch">
               <h5>New Delhi</h5>
-              <p>
-                22/22B, First Floor, Tilak Nagar,
-                <br />
-                New Delhi 110018
-              </p>
+              <p>22/22B, First Floor, Tilak Nagar,<br />New Delhi 110018</p>
             </div>
           </div>
         </div>
 
-        {/* Footer Bottom */}
+        {/* Bottom Text */}
         <p className="footer-bottom-text">
           Big Brand Bucket Pvt. Ltd. Copyright © since 2025. All Rights Reserved
         </p>
@@ -96,12 +82,7 @@ const TechnoscoreContact = () => {
         <a href="tel:+919149039480" className="sticky-icon phone">
           <FaPhoneAlt />
         </a>
-        <a
-          href="https://wa.me/919149039480"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="sticky-icon whatsapp"
-        >
+        <a href="https://wa.me/919149039480" target="_blank" rel="noopener noreferrer" className="sticky-icon whatsapp">
           <FaWhatsapp />
         </a>
       </div>
