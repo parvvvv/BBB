@@ -10,8 +10,7 @@ const services = [
   {
     title: 'iOS App Development Company in India',
     desc: 'Our expert iOS developers use Objective-C, UIKit, and Swift to build premium iPhone and iPad apps tailored to business goals.',
-    icon: 'icon-ios.svg',
-    highlight: true
+    icon: 'icon-ios.svg'
   },
   {
     title: 'React Native App Development',
@@ -46,6 +45,13 @@ const services = [
 ];
 
 const ServicesSection = () => {
+  const scrollToForm = () => {
+    const form = document.getElementById("contact-form");
+    if (form) {
+      form.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="services-section">
       <h2>
@@ -64,7 +70,12 @@ const ServicesSection = () => {
                 <img src={iconUrl} alt={service.title} />
               </div>
               <h3>{service.title}</h3>
-              <p>{service.desc}</p>
+              <p className="description">{service.desc}</p>
+              <div className="enquiry-button-wrapper">
+                <button className="enquiry-button" onClick={scrollToForm}>
+                  Enquiry Now
+                </button>
+              </div>
             </div>
           );
         })}

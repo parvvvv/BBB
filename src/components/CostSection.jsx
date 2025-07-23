@@ -18,28 +18,34 @@ const CostSection = () => {
 
   return (
     <section className="cost-section">
-      <h2>
-        Worried About <span>App Development Cost</span>?<br />
-        Local Teams Too <span>Expensive</span>?
-      </h2>
-      <p>
-        Big Brand Bucket offers affordable mobile app development services in India with zero compromise on quality.
-        Hire expert developers at a fraction of the local cost, backed by 24/7 support and NDAs.
-      </p>
+      <div className="cost-container">
+        <h2>
+          Worried About <span>App Development Cost</span>?<br />
+          Local Teams Too <span>Expensive</span>?
+        </h2>
+        <p>
+          Big Brand Bucket offers affordable mobile app development services in India with zero compromise on quality.
+          Hire expert developers at a fraction of the local cost, backed by 24/7 support and NDAs.
+        </p>
 
-      <div className="cost-features">
-        {features.map((feature, idx) => (
-          <div className="feature-box" key={idx}>
-            <img
-              src={new URL(`../assets/${feature.icon}`, import.meta.url).href}
-              alt={`${feature.text} icon`}
-            />
-            <span>{feature.text}</span>
-          </div>
-        ))}
+        <div className="cost-features">
+          {features.map((feature, idx) => (
+            <div className="feature-box" key={idx}>
+              <img
+                src={new URL(`../assets/${feature.icon}`, import.meta.url).href}
+                alt={`${feature.text} icon`}
+              />
+              <span>{feature.text}</span>
+            </div>
+          ))}
+        </div>
+
+        <div className="cta-wrapper">
+          <button className="cta-btn" onClick={scrollToForm}>
+            Get Cost Estimate
+          </button>
+        </div>
       </div>
-
-      <button className="cta-btn" onClick={scrollToForm}>Get Cost Estimate</button>
     </section>
   );
 };

@@ -1,24 +1,39 @@
 .cost-section {
-  background: #0e1a2b;
-  padding: 40px 10%;
-  text-align: center;
+  background: linear-gradient(145deg, #0e1a2b, #152238);
+  padding: 60px 10%;
   color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cost-container {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
 }
 
 .cost-section h2 {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 700;
   margin-bottom: 20px;
+  line-height: 1.4;
 }
 
 .cost-section h2 span {
   font-weight: 800;
+  color: #ffa200;
+  text-shadow: 0 0 5px rgba(255, 128, 0, 0.3);
 }
 
 .cost-section p {
-  font-size: 15px;
+  font-size: 15.5px;
   margin-bottom: 50px;
   color: #e0e0e0;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cost-features {
@@ -26,74 +41,94 @@
   justify-content: center;
   gap: 25px;
   margin-bottom: 40px;
-  flex-wrap: wrap; /* changed from nowrap for responsiveness */
+  flex-wrap: wrap;
 }
 
 .feature-box {
+  background: #132033;
+  border: 1px solid rgba(255, 128, 0, 0.4);
+  border-radius: 10px;
+  padding: 14px 20px;
+  color: white;
+  flex: 1 1 250px;
+  max-width: 300px;
   display: flex;
   align-items: center;
   gap: 10px;
-  border: 1px dashed #ff8000;
-  border-radius: 8px;
-  padding: 12px 20px;
-  color: white;
-  flex: 1 1 250px; /* allows wrapping */
-  max-width: 300px;
-  justify-content: center;
+  justify-content: flex-start;
+  box-shadow: 0 4px 10px rgba(255, 128, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(255, 128, 0, 0.15);
 }
 
 .feature-box img {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   object-fit: contain;
+  filter: drop-shadow(0 0 2px #ffa20080);
+}
+
+.feature-box span {
+  font-size: 14.5px;
+  font-weight: 500;
+}
+
+.cta-wrapper {
+  margin-top: 20px;
 }
 
 .cta-btn {
-  background: #d35400;
+  background: linear-gradient(135deg, #ff8000, #ff6600);
   border: none;
   color: white;
-  padding: 14px 30px;
-  font-size: 15px;
-  border-radius: 25px;
+  padding: 14px 36px;
+  font-size: 16px;
+  border-radius: 30px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.4);
 }
 
 .cta-btn:hover {
-  background: #b54300;
+  transform: translateY(-3px);
+  box-shadow: 0 0 18px rgba(255, 102, 0, 0.6);
 }
 
 /* Medium screens (tablet) */
 @media (max-width: 768px) {
   .cost-section {
-    padding: 30px 6%;
+    padding: 40px 6%;
   }
 
   .cost-section h2 {
-    font-size: 22px;
+    font-size: 24px;
   }
 
   .cost-section p {
-    font-size: 14px;
+    font-size: 14.5px;
     margin-bottom: 40px;
   }
 
   .feature-box {
-    padding: 10px 16px;
+    padding: 12px 18px;
     font-size: 14px;
     gap: 8px;
   }
 
   .cta-btn {
-    padding: 12px 26px;
-    font-size: 14px;
+    padding: 12px 28px;
+    font-size: 15px;
   }
 }
 
 /* Small screens (phones) */
 @media (max-width: 480px) {
   .cost-section {
-    padding: 25px 4%;
+    padding: 30px 4%;
   }
 
   .cost-section h2 {
@@ -101,7 +136,7 @@
   }
 
   .cost-section p {
-    font-size: 13px;
+    font-size: 13.5px;
     margin-bottom: 30px;
   }
 
@@ -119,14 +154,14 @@
   }
 
   .feature-box img {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
   }
 
   .cta-btn {
     width: 100%;
     font-size: 14px;
     padding: 12px;
-    border-radius: 20px;
+    border-radius: 25px;
   }
 }

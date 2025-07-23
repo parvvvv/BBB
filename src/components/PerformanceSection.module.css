@@ -1,90 +1,52 @@
 .performanceSection {
-  background-color: #031328;
-  padding: 40px 0;
-  color: #ffffff;
+  background-color: #06162e;
+  padding: 60px 20px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .textContainer {
-  margin-left: 80px;
-  max-width: 600px;
-}
-
-.textContainer h2 {
-  font-size: 24px;
-  line-height: 1.4;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.textContainer h2 span {
-  font-weight: 900;
-  color: #ffffff;
-}
-
-.textContainer p {
-  margin-bottom: 20px;
-  font-weight: 500;
-  color: #d9d9d9;
-}
-
-.textContainer button {
-  background-color: #c24d00;
+  max-width: 800px;
   color: #fff;
-  padding: 12px 24px;
+  text-align: left;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #ff9900;
+}
+
+.priority {
+  color: #ff9900;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #d1d1d1;
+}
+
+.ctaButton {
+  background: linear-gradient(90deg, #ff7a00, #d35400);
+  color: white;
   border: none;
-  border-radius: 30px;
+  padding: 16px 28px;
+  font-size: 1rem;
   font-weight: 600;
+  border-radius: 30px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.textContainer button:hover {
-  background-color: #a73e00;
-}
-
-/* Tablet */
-@media (max-width: 768px) {
-  .performanceSection {
-    justify-content: center;
-    padding: 30px 0;
-  }
-
-  .textContainer {
-    margin: 0 20px;
-    text-align: center;
-  }
-
-  .textContainer h2 {
-    font-size: 20px;
-  }
-
-  .textContainer button {
-    padding: 10px 22px;
-    font-size: 14px;
-  }
-}
-
-/* Phone */
-@media (max-width: 480px) {
-  .performanceSection {
-    padding: 25px 0;
-  }
-
-  .textContainer h2 {
-    font-size: 18px;
-  }
-
-  .textContainer p {
-    font-size: 14px;
-    margin-bottom: 16px;
-  }
-
-  .textContainer button {
-    padding: 10px 20px;
-    font-size: 13.5px;
-    width: 100%;
-    max-width: 280px;
-  }
+.ctaButton:hover {
+  background: linear-gradient(90deg, #ff8c1a, #c24600);
+  transform: translateY(-2px);
 }

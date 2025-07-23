@@ -1,50 +1,108 @@
 import React from 'react';
 import './TechnoscoreContact.css';
-
-const wpIcon = new URL('../assets/wp.jpeg', import.meta.url).href;
+import { FaWhatsapp, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
 
 const TechnoscoreContact = () => {
   return (
     <div className="contact-container">
-      <header className="header">
-        <div className="logo-image">
-          <img src={new URL('../assets/BigBrandBucketLogo.webp', import.meta.url).href} alt="Big Brand Bucket Logo" className="logo-img" />
-          <p className="tagline">BUILT FOR BIGGER IMPACT</p>
-        </div>
-      </header>
+      <footer className="main-footer">
+        {/* Top Section */}
+        <div className="footer-top">
+          {/* Quick Links */}
+          <div className="footer-column">
+            <h4 className="footer-heading">Quick Links</h4>
+            <ul>
+              <li><a href="https://bigbrandbucket.com/">Home</a></li>
+              <li><a href="https://bigbrandbucket.com/about-us/">About Us</a></li>
+              <li><a href="https://bigbrandbucket.com/our-portfolio/">Our Portfolio</a></li>
+              <li><a href="https://bigbrandbucket.com/privacy-policy/">Privacy Policy</a></li>
+              <li><a href="https://bigbrandbucket.com/refund-policy/">Refund Policy</a></li>
+              <li><a href="https://bigbrandbucket.com/contact-us/">Contact us</a></li>
+            </ul>
+          </div>
 
-      <section className="description">
-        <p>
-          Big Brand Bucket is a global digital solutions provider with over <strong>25 years of experience</strong>. Headquartered in New Delhi, India, we have a team of <strong>1,500 skilled professionals</strong> serving over <strong>8,530 clients in 50 countries</strong>, including the <strong>US, UK, Canada, and Australia</strong>. Our key certifications include <strong>ISO 27001:2013 for Data Security, ISO 9001:2015 for Data Quality, HIPAA compliance, and CMMI level 3</strong>. We are also recognized as an <strong>Amazon Service Provider Network Partner, Microsoft Silver Development Partner, nopCommerce Gold Partner,</strong> and <strong>Shopify Solutions Partner</strong>.
+          {/* Services */}
+          <div className="footer-column">
+            <h4 className="footer-heading">Services</h4>
+            <ul>
+              <li><a href="https://bigbrandbucket.com/app-development-company-in-delhi/">APP Development</a></li>
+              <li><a href="https://bigbrandbucket.com/ecommerce-website-development/">E-Commerce Web Development</a></li>
+              <li><a href="https://bigbrandbucket.com/cms-web-development/">CMS Web Development</a></li>
+              <li><a href="https://bigbrandbucket.com/digital-marketing/">Digital Marketing</a></li>
+              <li><a href="https://bigbrandbucket.com/software-company-in-delhi/">Software Development</a></li>
+              <li><a href="https://bigbrandbucket.com/web-designing-company-in-delhi-ncr/">Web Designing Services</a></li>
+            </ul>
+          </div>
+
+          {/* Subscribe & Contact */}
+          <div className="footer-column subscribe-section">
+            <div className="subscribe">
+              <input type="email" placeholder="Email" />
+              <button className="subscribe-btn">SUBSCRIBE</button>
+            </div>
+            <div className="contact-details">
+              <p>+91 - 9149039480 &nbsp; | &nbsp; +91 - 9818202357</p>
+              <p><a href="mailto:raghav@bigbrandbucket.com">raghav@bigbrandbucket.com</a></p>
+              <div className="contact-icons">
+                <a
+                  href="https://wa.me/919149039480"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaWhatsapp className="icon whatsapp" />
+                </a>
+                <a href="mailto:raghav@bigbrandbucket.com">
+                  <FaEnvelope className="icon mail" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <hr className="footer-divider" />
+
+        {/* Branches Section */}
+        <div className="branches">
+          <h4 className="branches-heading">Our Branches</h4>
+          <div className="branches-wrapper">
+            <div className="branch">
+              <h5>Gurugram</h5>
+              <p>
+                Plot No. 76 D, Udyog Vihar Phase 4,
+                <br />
+                Gurugram, Haryana 122001
+              </p>
+            </div>
+            <div className="branch">
+              <h5>New Delhi</h5>
+              <p>
+                22/22B, First Floor, Tilak Nagar,
+                <br />
+                New Delhi 110018
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Footer Bottom */}
+        <p className="footer-bottom-text">
+          Big Brand Bucket Pvt. Ltd. Copyright © since 2025. All Rights Reserved
         </p>
-      </section>
-
-      <div className="locations">
-        <div className="location-box">
-          <h4>🇺🇸 US</h4>
-          <p>One Boston Place, 201 Washington St 26th Floor, Boston, MA 02108, United States</p>
-        </div>
-
-        <div className="location-box">
-          <h4>🇮🇳 IN</h4>
-          <p>Plot No. 76 D, Phase IV, Udyog Vihar, Sector 18, Gurugram, Haryana, India</p>
-          <p>📞 +91 9149039480</p>
-        </div>
-      </div>
-
-      <div className="email-section">
-        <p>For any query, please email us at <a href="mailto:raghav@bigbrandbucket.com">raghav@bigbrandbucket.com</a></p>
-      </div>
-
-      <footer className="footer">
-        <p>© Copyright 2025, All Rights Reserved with <a href="mailto:raghav@bigbrandbucket.com">Big Brand Bucket</a> – Web & Mobile App Development Company.</p>
       </footer>
 
+      {/* Sticky Buttons */}
       <div className="sticky-buttons">
-        <a href="tel:+919149039480" className="sticky-btn call-btn">📞 Call</a>
-        <a href="https://wa.me/9149039480" className="sticky-btn whatsapp-btn">
-          <img src={wpIcon} alt="WhatsApp" className="whatsapp-icon" />
-          WhatsApp
+        <a href="tel:+919149039480" className="sticky-icon phone">
+          <FaPhoneAlt />
+        </a>
+        <a
+          href="https://wa.me/919149039480"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="sticky-icon whatsapp"
+        >
+          <FaWhatsapp />
         </a>
       </div>
     </div>

@@ -7,7 +7,7 @@ import CostSection from './components/CostSection';
 import TestimonialSection from './components/TestimonialSection';
 import WhyTechnoscoreSection from './components/WhyTechnoscoreSection';
 import PerformanceSection from './components/PerformanceSection';
-import SuccessStories from './components/SuccessStories';
+import BigBrandSection from './components/BigBrandSection';
 import FAQ from './components/FAQ';
 import ContactSection from './components/ContactSection';
 import FooterSection from './components/FooterSection';
@@ -16,13 +16,15 @@ import ThankYou from './components/ThankYou'; // ✅ create this file later
 const MainPage = () => (
   <>
     <HeroSection />
+    <BigBrandSection />
+
     <ClientsSection />
     <ServicesSection />
     <CostSection />
     <TestimonialSection />
     <WhyTechnoscoreSection />
     <PerformanceSection />
-    <SuccessStories />
+    
     <FAQ />
     <ContactSection />
     <FooterSection />

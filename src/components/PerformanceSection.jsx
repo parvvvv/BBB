@@ -12,14 +12,16 @@ const PerformanceSection = () => {
   return (
     <section className={styles.performanceSection}>
       <div className={styles.textContainer}>
-        <h2>
-          YOUR <span>MOBILE APP'S PERFORMANCE</span> &<br />
-          SCALABILITY ARE <span>OUR #1 PRIORITY</span>
+        <h2 className={styles.heading}>
+          YOUR <span className={styles.highlight}>MOBILE APP'S PERFORMANCE</span> &<br />
+          <span className={styles.highlight}>SCALABILITY</span> ARE <span className={styles.priority}>OUR #1 PRIORITY</span>
         </h2>
-        <p>
+        <p className={styles.description}>
           As a leading mobile app development company in India, Big Brand Bucket ensures your application is built for speed, reliability, and growth—across devices and user bases.
         </p>
-        <button onClick={scrollToForm}>Get Your Scalable App Quote</button>
+        <button className={styles.ctaButton} onClick={scrollToForm}>
+          Get Your Scalable App Quote
+        </button>
       </div>
     </section>
   );

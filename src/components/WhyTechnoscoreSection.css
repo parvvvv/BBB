@@ -9,6 +9,16 @@
   margin-bottom: 40px;
   color: black;
 }
+.why-intro {
+  font-size: 15.5px;
+  color: #555;
+  text-align: center;
+  max-width: 800px;
+  line-height: 1.6;
+  margin: -15px auto 40px;
+  padding: 0 12px;
+}
+
 
 .why-heading span {
   font-weight: 800;

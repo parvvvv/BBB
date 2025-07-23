@@ -102,8 +102,10 @@ const HeroSection = () => {
                 placeholder="Describe your requirement *"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
+                maxLength={30} // ✅ Limit to 30 characters
                 required
               />
+
               <button type="submit" disabled={loading}>
                 {loading ? 'Submitting...' : 'Get Free Quote'}
               </button>

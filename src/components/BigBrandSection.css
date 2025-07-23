@@ -1,0 +1,78 @@
+.bigbrand-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 60px 10%;
+  background-color: #f9f9f9;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.bigbrand-content {
+  flex: 1 1 500px;
+  max-width: 700px;
+}
+
+.bigbrand-content h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #222;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.heading-icon {
+  color: #ff5e5e;
+  font-size: 1.5rem;
+}
+
+.highlight {
+  color: #ff5e5e;
+}
+
+.bigbrand-content p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.cta-button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #ff5e5e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e94444;
+}
+
+.bigbrand-image {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bigbrand-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.bigbrand-image img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}

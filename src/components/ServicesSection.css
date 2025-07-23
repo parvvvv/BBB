@@ -30,12 +30,16 @@
 }
 
 .service-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: #fff;
   border: 1px solid #ff8000;
   border-radius: 12px;
   padding: 25px;
   text-align: left;
   transition: transform 0.2s ease;
+  height: 100%;
 }
 
 .service-card:hover {
@@ -65,9 +69,32 @@
 }
 
 .service-card p {
+  flex-grow: 1;
   font-size: 14px;
   color: #444;
   line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* ✅ Button Wrapper */
+.enquiry-button-wrapper {
+  margin-top: auto;
+}
+
+/* ✅ Button Styling */
+.enquiry-button {
+  padding: 10px 20px;
+  background-color: #ff8000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.enquiry-button:hover {
+  background-color: #e76b00;
 }
 
 /* ✅ Responsive Breakpoints */
