@@ -103,7 +103,7 @@ const HeroSection = () => {
               </div>
 
               <select value={budget} onChange={(e) => setbudget(e.target.value)} required>
-                <option value="" disabled hidden>Select Budget *</option>
+                <option value="" disabled hidden>Estimated Budget *</option>
                 <option value="Under ₹1 Lakh">Under ₹1 Lakh</option>
                 <option value="₹1 Lakh to ₹2 Lakh">₹1 Lakh to ₹2 Lakh</option>
                 <option value="₹2 Lakh to ₹5 Lakh">₹2 Lakh to ₹5 Lakh</option>
