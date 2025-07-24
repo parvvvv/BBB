@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // ✅ Added
+import { useNavigate } from 'react-router-dom';
 import './ContactSection.css';
 
 const countryCodes = [
@@ -13,15 +13,25 @@ const countryCodes = [
   { code: '+1', country: 'Canada' },
 ];
 
+const budgetOptions = [
+  '',
+  'Under ₹1 Lakh',
+  '₹1 Lakh to ₹2 Lakh',
+  '₹2 Lakh to ₹5 Lakh',
+  '₹5 Lakh and Above',
+  
+];
+
 const ContactSection = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [countryCode, setCountryCode] = useState('');
+  const [budget, setBudget] = useState('');
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const navigate = useNavigate(); // ✅ React Router navigation
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -31,6 +41,7 @@ const ContactSection = () => {
     form.append('name', name);
     form.append('email', email);
     form.append('phone', `${countryCode}${phone}`);
+    form.append('budget', budget);
     form.append('message', message);
 
     try {
@@ -42,7 +53,7 @@ const ContactSection = () => {
         }
       );
 
-      navigate('/thankyou'); // ✅ Correct SPA redirect
+      navigate('/thankyou');
     } catch (error) {
       console.error('Error submitting form:', error);
       alert('Error submitting form.');
@@ -74,7 +85,6 @@ const ContactSection = () => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
-              
             />
             <input
               type="email"
@@ -83,6 +93,7 @@ const ContactSection = () => {
               onChange={(e) => setEmail(e.target.value)}
               required
             />
+
             <div className="phone-field">
               <select
                 value={countryCode}
@@ -106,6 +117,25 @@ const ContactSection = () => {
                 required
               />
             </div>
+
+            {/* ✅ Budget Dropdown */}
+            <select
+              value={budget}
+              onChange={(e) => setBudget(e.target.value)}
+              required
+            >
+              <option value="" disabled hidden>
+                Estimated Budget *
+              </option>
+              {budgetOptions.map((option, idx) =>
+                option ? (
+                  <option key={idx} value={option}>
+                    {option}
+                  </option>
+                ) : null
+              )}
+            </select>
+
             <textarea
               placeholder="Describe your requirements *"
               value={message}

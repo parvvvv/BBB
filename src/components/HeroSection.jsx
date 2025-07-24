@@ -14,9 +14,10 @@ const HeroSection = () => {
   const [phone, setPhone] = useState('');
   const [countryCode, setCountryCode] = useState('');
   const [message, setMessage] = useState('');
+  const [budget, setbudget] = useState(''); // ✅ New state for budget
   const [loading, setLoading] = useState(false);
 
-  const navigate = useNavigate(); // ✅ React Router navigation
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,6 +28,7 @@ const HeroSection = () => {
     form.append('email', email);
     form.append('phone', `${countryCode}${phone}`);
     form.append('message', message);
+    form.append('budget', budget); // ✅ Include budget in form
 
     try {
       await fetch('https://script.google.com/macros/s/AKfycbzpztrVE1ge3CKpr2UZFlwm8GUgehzpDart0HA5JacVq4YXMaIgZefnbGmlSICmcNEDDQ/exec', {
@@ -34,7 +36,7 @@ const HeroSection = () => {
         body: form,
       });
 
-      navigate('/thankyou'); // ✅ Navigate to thank you page
+      navigate('/thankyou');
     } catch (error) {
       console.error('Error submitting form:', error);
       alert('Error submitting form.');
@@ -77,6 +79,7 @@ const HeroSection = () => {
             <form onSubmit={handleSubmit}>
               <input type="text" placeholder="Name*" value={name} onChange={(e) => setName(e.target.value)} required />
               <input type="email" placeholder="Email*" value={email} onChange={(e) => setEmail(e.target.value)} required />
+              
               <div className="phone-field">
                 <select value={countryCode} onChange={(e) => setCountryCode(e.target.value)} required>
                   <option value="" disabled hidden>Country</option>
@@ -98,11 +101,20 @@ const HeroSection = () => {
                   required
                 />
               </div>
+
+              <select value={budget} onChange={(e) => setbudget(e.target.value)} required>
+                <option value="" disabled hidden>Select Budget *</option>
+                <option value="Under ₹1 Lakh">Under ₹1 Lakh</option>
+                <option value="₹1 Lakh to ₹2 Lakh">₹1 Lakh to ₹2 Lakh</option>
+                <option value="₹2 Lakh to ₹5 Lakh">₹2 Lakh to ₹5 Lakh</option>
+                <option value="₹5 Lakh and Above">₹5 Lakh and Above</option>
+              </select>
+
               <textarea
                 placeholder="Describe your requirement *"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                maxLength={30} // ✅ Limit to 30 characters
+                maxLength={30}
                 required
               />
 
